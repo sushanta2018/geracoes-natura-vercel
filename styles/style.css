@@ -1,0 +1,191 @@
+@font-face {
+  font-family: OfeliaExtrabold;
+  src: url("/font/OfeliaDisplay-Extrabold.ttf");
+}
+
+@font-face {
+  font-family: OfeliaBold;
+  src: url("/font/OfeliaDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: OfeliaMedium;
+  src: url("/font/OfeliaDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: OfeliaNormal;
+  src: url("/font/OfeliaDisplay-Regular.ttf");
+}
+/*================================================EARN-BG============================================================= */
+.earn-bg {
+  position: relative;
+  width: 100%;
+}
+.earn-bg:after {
+  content: "";
+  top: -70px;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 400px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("/images/homeHeader-backscreen.png");
+}
+/*================================================MAKEUP============================================================= */
+.eyeliner-bg {
+  position: relative;
+  width: 100%;
+}
+.eyeliner-bg::after {
+  background-color: #ffdcdf;
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+/*================================================PERFUME============================================================= */
+.perfume-bg {
+  position: relative;
+  width: 100%;
+}
+.perfume-bg::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url("/images/Backscreen-Perfumes-Pink.png");
+}
+/*==========================================BODY-LOTION-DESKTOP-============================================================ */
+.body-lotion-bg {
+  position: relative;
+  width: 100%;
+}
+.body-lotion-bg::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url("/images/Backscreen-Corpo-Orange.png");
+}
+/*==========================================SWIPER-DESKTOP============================================================ */
+.mySwiper {
+  width: 84%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+}
+.mySwiperSkin {
+  width: 100%;
+  margin: auto;
+}
+.mySwiperPerfumes {
+  width: 84%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-100-100 {
+  background-size: 100% 100%;
+}
+
+/*==========================================MEADIA-QUERY============================================================ */
+@media (max-width: 768px) {
+  .earn-bg:after {
+    height: 229px;
+    top: 0;
+    background-image: url("/images/mobile-curve.png");
+  }
+  .eyeliner-bg::after {
+    background-image: url("/images/eyeliner-bg.png");
+  }
+  .perfume-bg::after {
+    background-image: url("/images/perfume-bg-img.png");
+  }
+  .body-lotion-bg::after {
+    background-image: url("/images/body-lotion-mobile-bg.png");
+  }
+
+  /*==========================================SWIPER-MOBILE============================================================ */
+  .mySwiper {
+    width: 100% !important;
+  }
+  .mySwiperPerfumes {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+input[type="checkbox"] + .box-container .checked-element {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .box-container .checked-element {
+  display: flex;
+}
+input[type="checkbox"]:checked + .box-container {
+  border: 2px solid white;
+}
+input[type="checkbox"]:checked + .box-container {
+  border: 2px solid #f95623;
+}
+
+input[type="checkbox"]:checked + .box-container.solid-blue-border {
+  border: 2px solid #3e4b99 !important;
+}
+input[type="checkbox"]:checked + .box-container .custom-checkbox {
+  border: none !important;
+}
+
+.profile-swiper .swiper-horizontal {
+  padding-right: 16px;
+}
+/* LOADER  */
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: #e0a8ac;
+  box-shadow: -24px 0 #e0a8ac, 24px 0 #e0a8ac;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #e0a8ac;
+    box-shadow: -24px 0 #f95623, 24px 0 #e0a8ac;
+  }
+  66% {
+    background: #f95623;
+    box-shadow: -24px 0 #e0a8ac, 24px 0 #e0a8ac;
+  }
+  100% {
+    background: #e0a8ac;
+    box-shadow: -24px 0 #e0a8ac, 24px 0 #f95623;
+  }
+}

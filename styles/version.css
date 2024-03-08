@@ -1,0 +1,76 @@
+.perfil-bg {
+  position: relative;
+  width: 100%;
+}
+.perfil-bg::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  background-image: url("/images/Backscreen-consultoria.png");
+  opacity: 1;
+  margin-top: -60px;
+}
+.image-before {
+  position: relative;
+  width: 247px;
+  height: 247px;
+}
+.image-before::before {
+  content: "";
+  top: 7px;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 247px 247px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 100%;
+  background: #cff9ff;
+  opacity: 0.4;
+  mix-blend-mode: color;
+}
+.rounded-1 {
+  position: relative;
+  width: 247px;
+  height: 247px;
+}
+.rounded-2 {
+  position: relative;
+  width: 247px;
+  height: 247px;
+}
+
+/* ##################################################################### SAFFRON  BG ##################################################### */
+.bg-saffron {
+  background: var(--Laranja-Natura, #eb6619);
+  margin-top: 33px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  flex-shrink: 0;
+}
+
+/* #################################################################### MOBILE VIEW ########################################################## */
+@media (max-width: 769px) {
+  .perfil-bg::before {
+    background-image: url("/images/Header-background-profile.png");
+    height: 420px;
+    z-index: -1;
+    /* margin-top: 60px; */
+    margin-top: 40px;
+  }
+  .bg-saffron {
+    background: url("/images/mobile-saffron.png");
+    margin-top: 35px;
+    background-size: 100% 100%;
+    padding-left: 24px;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+  }
+}
